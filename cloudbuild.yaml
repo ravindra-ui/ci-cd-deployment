@@ -4,11 +4,11 @@ steps:
 # args: ['clone','https://github.com/ravindra-ui/ci-cd-deployment.git/${_PROJECT}/r/${_REPO_NAME}']
 
 #Build the image 
-- name: 'gcr.io/akcess-labs/docker'
+- name: 'gcr.io/akcess-labs'
   args: ['build','-t','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}','.']
 
 #Push the image  
-- name: 'gcr.io/akcess-labs/docker'
+- name: 'gcr.io/akcess-labs/'
   args: ['push','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
   
 #Update the container image using kubectl set
