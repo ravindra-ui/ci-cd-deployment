@@ -1,6 +1,6 @@
 steps:
 #First Clone from Google Cloud Source Repository  
-- name: 'gcr.io/akcess-labs/git'
+- name: 'gcr.io/akcess-labs/github'
   args: ['clone','https://github.com/ravindra-ui/${_PROJECT}/r/${_REPO_NAME}']
 
 #Build the image 
