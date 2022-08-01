@@ -1,14 +1,14 @@
 steps:
 #First Clone from Google Cloud Source Repository  
 - name: 'gcr.io/akcess-labs/git'
-  args: ['clone','https://github.com/ravindra-ui/ci-cd-deployment/${_PROJECT}/r/${_REPO_NAME}']
+  args: ['clone','https://github.com/ravindra-ui/${_PROJECT}/r/${_REPO_NAME}']
 
 #Build the image 
-- name: 'gcr.io/akcess-labs/nginx-test'
+- name: 'gcr.io/akcess-labs/docker'
   args: ['build','-t','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}','.']
 
 #Push the image  
-- name: 'gcr.io/akcess-labsnginx-test'
+- name: 'gcr.io/akcess-labs/docker'
   args: ['push','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
   
 #Update the container image using kubectl set
