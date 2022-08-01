@@ -21,7 +21,7 @@ steps:
   
 substitutions:
     #GCP Specific configuration. Please DON'T change anything
-    _PROJECT: AKcess-Labs
+    _PROJECT: akcess-labs
     _ZONE: europe-west2-a
     _GKE_CLUSTER: akcess
     
