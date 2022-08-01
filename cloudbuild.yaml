@@ -1,6 +1,6 @@
 steps:
 First Clone from Google Cloud Source Repository  
-- name: 'gcr.io/akcess-labs/nginx-test'
+- name: 'gcr.io/akcess-labs/nginx-test/git'
   args: ['clone','https://github.com/ravindra-ui/ci-cd-deployment/${_PROJECT}/r/${_REPO_NAME}']
 
 #Build the image 
