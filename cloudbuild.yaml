@@ -24,14 +24,14 @@ steps:
   
 substitutions:
     #GCP Specific configuration. Please DON'T change anything
-    _PROJECT: learn-gcp-with-mahesh
-    _ZONE: asia-south1-a
-    _GKE_CLUSTER: learn-gcp-with-mahesh-gke-cluster
+    _PROJECT: AKcess-Labs
+    _ZONE: europe-west2-a
+    _GKE_CLUSTER: akcess
     
     #Repository Specific configuration. DevOps can change this settings
     _DEPLOYMENTNAME: hello-world-service
     _CONTAINERNAME: hello-world-service    
-    _REPO_NAME: cicd-service
+    _REPO_NAME: ci-cd-deployment
     
     # Developers ONLY change
     _VERSION: v1.0
