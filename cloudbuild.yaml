@@ -9,8 +9,9 @@ steps:
   args: ['push','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
   
 #Update the container image using kubectl set
-- name: 'gcr.io/cloud-builders/kubectl/gke-deploy'
+- name: 'gcr.io/cloud-builders/kubectl'
   args:
+  - 'apply'
   - 'set'
   - 'image'
   - 'deployment/${_DEPLOYMENTNAME}'
@@ -26,8 +27,8 @@ substitutions:
     _GKE_CLUSTER: akcess
     
     #Repository Specific configuration. DevOps can change this settings
-    _DEPLOYMENTNAME: ravi-deployment
-    _CONTAINERNAME: nginx    
+    _DEPLOYMENTNAME: ravi-deployment1
+    _CONTAINERNAME: nginx:latest    
     _REPO_NAME: ci-cd-deployment
     
     # Developers ONLY change
