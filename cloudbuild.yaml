@@ -1,7 +1,7 @@
 steps:
 
 #Build the image 
-- name: 'gcr.io/akcess-labs/docker'
+- name: 'gcr.io/akcess-labs/github.com/ravindra-ui/ci-cd-deployment'
   args: ['build','-t','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}','.']
 
 #Push the image  
