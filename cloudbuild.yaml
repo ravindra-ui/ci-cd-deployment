@@ -1,7 +1,7 @@
 steps:
 #First Clone from Google Cloud Source Repository  
 - name: 'gcr.io/akcess-labs/github'
-  args: ['clone','https://github.com/ravindra-ui/${_PROJECT}/r/${_REPO_NAME}']
+  args: ['clone','https://github.com/ravindra-ui/ci-cd-deployment.git/${_PROJECT}/r/${_REPO_NAME}']
 
 #Build the image 
 - name: 'gcr.io/akcess-labs/docker'
@@ -31,10 +31,10 @@ substitutions:
     #Repository Specific configuration. DevOps can change this settings
     _DEPLOYMENTNAME: hello-world-service
     _CONTAINERNAME: hello-world-service    
-    _REPO_NAME: ravindra-ui/ci-cd-deployment
+    _REPO_NAME: ci-cd-deployment
     
     # Developers ONLY change
-    _VERSION: v1.1
+    _VERSION: v1.0
     
 options:
     substitution_option: 'ALLOW_LOOSE'
