@@ -27,7 +27,7 @@ substitutions:
     
     #Repository Specific configuration. DevOps can change this settings
     _DEPLOYMENTNAME: ravi-deployment1
-    _CONTAINERNAME: nginx:latest    
+    _CONTAINERNAME: nginx    
     _REPO_NAME: ci-cd-deployment
     
     # Developers ONLY change
