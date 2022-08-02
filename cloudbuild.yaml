@@ -8,6 +8,10 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
   
+#apply file
+- name: "gcr.io/cloud-builders/kubectl"
+  args: ["apply", "-f", "myapp.yaml"]
+  
 #Update the container image using kubectl set
 - name: 'gcr.io/cloud-builders/kubectl'
   args:
