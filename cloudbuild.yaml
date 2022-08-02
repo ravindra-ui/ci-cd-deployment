@@ -15,6 +15,7 @@ steps:
   - 'image'
   - 'deployment/${_DEPLOYMENTNAME}'
   - '${_CONTAINERNAME}=gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}'
+  - 'namespace/${NAMESPACENAME}'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=${_ZONE}'
   - 'CLOUDSDK_CONTAINER_CLUSTER=${_GKE_CLUSTER}'
@@ -29,6 +30,7 @@ substitutions:
     _DEPLOYMENTNAME: myapp
     _CONTAINERNAME: myapp  
     _REPO_NAME: ci-cd-deployment
+    _NAMESPACENAME: test-deployment
     
     # Developers ONLY change
     _VERSION: v1.01
