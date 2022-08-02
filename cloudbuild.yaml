@@ -27,7 +27,7 @@ substitutions:
     _GKE_CLUSTER: akcess
     
     #Repository Specific configuration. DevOps can change this settings
-    _DEPLOYMENTNAME: myapp
+    _DEPLOYMENTNAME: deployment
     _CONTAINERNAME: myapp  
     _REPO_NAME: ci-cd-deployment
    # _NAMESPACENAME: test-deployment
