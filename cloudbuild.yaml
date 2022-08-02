@@ -26,8 +26,8 @@ substitutions:
     _GKE_CLUSTER: akcess
     
     #Repository Specific configuration. DevOps can change this settings
-    _DEPLOYMENTNAME: nginx2
-    _CONTAINERNAME: nginx1    
+    _DEPLOYMENTNAME: myapp
+    _CONTAINERNAME: myapp  
     _REPO_NAME: ci-cd-deployment
     
     # Developers ONLY change
