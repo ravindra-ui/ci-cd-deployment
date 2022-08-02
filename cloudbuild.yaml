@@ -16,9 +16,7 @@ steps:
   - deployment
   - my-app
   - my-app=gcr.io/$_PROJECT/my-app:$COMMIT_SHA
-  - namespace
-  - my-app
-  
+    
   #  - 'namespace/${_NAMESPACENAME}'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=${_ZONE}'
