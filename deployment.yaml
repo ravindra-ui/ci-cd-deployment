@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: gcr.io/akcess-labs/github.com/ravindra-ui/ci-cd-deployment
         ports:
         - containerPort: 80
