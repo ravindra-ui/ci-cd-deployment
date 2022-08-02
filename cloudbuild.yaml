@@ -13,8 +13,6 @@ steps:
   args: 
   - set
   - image
-  - deployment
-  - my-app
   - my-app=gcr.io/$_PROJECT/my-app:$COMMIT_SHA
     
   #  - 'namespace/${_NAMESPACENAME}'
