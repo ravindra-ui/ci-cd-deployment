@@ -8,7 +8,7 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push','gcr.io/${_PROJECT}/${_CONTAINERNAME}:${_VERSION}']
   
-#apply deployment
+#Apply deployment
 - name: "gcr.io/cloud-builders/kubectl"
   args: ["apply", "-f", "myapp.yaml"]
   env:
@@ -28,12 +28,12 @@ steps:
   - 'CLOUDSDK_CONTAINER_CLUSTER=${_GKE_CLUSTER}'
   
 substitutions:
-    #GCP Specific configuration. Please DON'T change anything
+    #GCP Specific configuration. 
     _PROJECT: akcess-labs
     _ZONE: europe-west2-a
     _GKE_CLUSTER: akcess
     
-    #Repository Specific configuration. DevOps can change this settings
+    #Repository Specific configuration. 
     _DEPLOYMENTNAME: myapp
     _CONTAINERNAME: myapp  
     _REPO_NAME: ci-cd-deployment
