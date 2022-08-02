@@ -15,8 +15,8 @@ steps:
   - image
   - deployment
   - my-app
-  - my-app=gcr.io/$PROJECT_ID/test-deployment:$COMMIT_SHA
-  - --namespace
+  - my-app=gcr.io/$_PROJECT/my-app:$COMMIT_SHA
+  - namespace
   - my-app
   
   #  - 'namespace/${_NAMESPACENAME}'
@@ -31,7 +31,7 @@ substitutions:
     _GKE_CLUSTER: akcess
     
     #Repository Specific configuration. DevOps can change this settings
-    _DEPLOYMENTNAME: test-deployment
+   # _DEPLOYMENTNAME: test-deployment
     _CONTAINERNAME: myapp  
     _REPO_NAME: ci-cd-deployment
    # _NAMESPACENAME: test-deployment
