@@ -10,7 +10,15 @@ steps:
   
 #Update the container image using kubectl set
 - name: 'gcr.io/cloud-builders/kubectl'
-  args: ["apply", "-f", "k8s/"]
+  args: 
+  - set
+  - image
+  - deployment
+  - my-app
+  - my-app=gcr.io/$PROJECT_ID/my-app-api:$COMMIT_SHA
+  - --namespace
+  - my-app
+  
   #  - 'namespace/${_NAMESPACENAME}'
   env:
   - 'CLOUDSDK_COMPUTE_ZONE=${_ZONE}'
